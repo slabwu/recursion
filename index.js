@@ -64,4 +64,4 @@ function mergeSort(array) {
     }
 }
 
-console.log(mergeSort([4 , 1, 2, 5 , 3]));
+console.log(mergeSort([4 , 1, 2, 5, 3]));
