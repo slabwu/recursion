@@ -2,13 +2,7 @@ function mergeSort(array) {
     if (array.length === 1) return array;
     let left = array;
     let right = left.splice(Math.ceil(array.length / 2), Math.floor(array.length / 2));
-
     let length = left.length + right.length;    
-    if (length === 2) {
-        return (left[0] < right[0]) ?
-            [left[0], right[0]] :
-            [right[0], left[0]] ;
-    }
 
     left = mergeSort(left);
     right = mergeSort(right);
@@ -31,4 +25,4 @@ function mergeSort(array) {
     }
 }
 
-console.log(mergeSort([4 , 1, 2, 5, 3]));
+console.log(mergeSort([4, 1, 2, 5, 3]));
