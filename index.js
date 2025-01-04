@@ -38,6 +38,9 @@ function mergeSort(array) {
 
     console.log(left);
     console.log(right);
+
+    mergeSort(left);
+    mergeSort(right);
 }
 
 mergeSort([4 , 1, 2, 5, 3]);
