@@ -28,5 +28,16 @@ function fibsRec(n) {
     return output;
 }
 
-console.log(fibs(8));
-console.log(fibsRec(8));
+//console.log(fibs(8));
+//console.log(fibsRec(8));
+
+function mergeSort(array) {
+    if (array.length === 1) return;
+    let left = array;
+    let right = left.splice(Math.ceil(array.length / 2), Math.floor(array.length / 2));
+
+    console.log(left);
+    console.log(right);
+}
+
+mergeSort([4 , 1, 2, 5, 3]);
