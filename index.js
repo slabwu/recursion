@@ -21,22 +21,10 @@ function fibs(n) {
 }
 
 function fibsRec(n) {
-    let output = [];
-
-    let fib = n => {
-        if (n === 1) {
-            return 0;
-        } else if (n === 2 || n === 3) {
-            return 1;
-        } else {
-            return fib(n - 1) + fib(n - 2);
-        }
-    }
-
-    for (let i = 1; i < n + 1; i++) {
-        output.push(fib(i));
-    }
-
+    if (n < 2) return [0];
+    if (n < 3) return [0, 1];
+    let output = fibsRec(n - 1);
+    output.push(output[n - 2] + output[n - 3]);
     return output;
 }
 
